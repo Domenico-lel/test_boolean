@@ -1,0 +1,87 @@
+/* Stile per il body */
+
+body {
+  background-image: url('background.jpg'); /* Sfondo con immagine */
+  background-size: cover; /* Adatta l'immagine per coprire completamente l'elemento body */
+  background-repeat: no-repeat; /* Impedisce la ripetizione dell'immagine */
+  padding: center; /* Padding centrale (da correggere, potrebbe essere '0') */
+}
+
+/* Stili per l'elemento con classe .primo */
+
+.primo {
+  position: relative; /* Posizione relativa per gli elementi interni */
+  width: 603px; /* Larghezza fissa */
+  margin: 0 auto; /* Centra l'elemento orizzontalmente */
+  color: white; /* Colore del testo */
+  padding: 20px; /* Aggiungiamo un padding per separare il contenuto dal bordo */
+}
+
+/* Stile per l'overlay */
+
+.primo::before {
+  content: ""; /* Contenuto pseudo-elemento ::before */
+  position: absolute; /* Posizione assoluta rispetto a .primo */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Colore nero con opacità del 80% */
+  z-index: -1; /* Porta l'overlay dietro il contenuto */
+  border-radius: 10px; /* Bordo arrotondato */
+  backdrop-filter: blur(1px); /* Effetto di vetro (glass) */
+}
+
+/* Stili per il contenuto all'interno di .primo */
+
+img {
+  width: 190px; /* Larghezza delle immagini */
+}
+
+h2 {
+  color: #00ff00; /* Colore del titolo */
+}
+
+/* Stile per la barra verde */
+
+.lineaverde {
+  background-color: #00ff00; /* Colore di sfondo verde */
+  width: 603px; /* Larghezza fissa */
+  margin: 0 auto; /* Centra orizzontalmente */
+  height: 28px; /* Altezza della barra */
+  align-self: auto; /* Allinea verticalmente in base al contenuto */
+  padding-top: 1%; /* Spaziatura sopra la barra */
+}
+
+.bordo {
+  text-align: center; /* Allinea il testo al centro */
+}
+
+/* Indicatori di batteria */
+
+.batteria-quasi {
+  height: 6px; /* Altezza della linea */
+  background-image: linear-gradient(to right, #ffa600 40%, transparent 0%); /* Gradiente giallo ocra fino a metà e poi trasparente */
+  background-size: 100% 100%; /* Dimensione del gradiente */
+  border: none; /* Nessun bordo */
+  border-radius: 3px; /* Bordo arrotondato */
+  margin: 5px 0; /* Spaziatura sopra e sotto la linea */
+}
+
+.batteria-ottima {
+  height: 6px; /* Altezza della linea */
+  background-image: linear-gradient(to right, #00ff00 100%, transparent 0%); /* Gradiente verde fino a metà e poi trasparente */
+  background-size: 100% 100%; /* Dimensione del gradiente */
+  border: none; /* Nessun bordo */
+  border-radius: 3px; /* Bordo arrotondato */
+  margin: 5px 0; /* Spaziatura sopra e sotto la linea */
+}
+
+.batteria-scarica {
+  height: 6px; /* Altezza della linea */
+  background-image: linear-gradient(to right, #ff0000 20%, transparent 0%); /* Gradiente rosso fino a metà e poi trasparente */
+  background-size: 100% 100%; /* Dimensione del gradiente */
+  border: none; /* Nessun bordo */
+  border-radius: 3px; /* Bordo arrotondato */
+  margin: 5px 0; /* Spaziatura sopra e sotto la linea */
+}
